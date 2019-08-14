@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React ,{Component} from 'react';
+import Film from './component/Film';
+class App extends Component {
+  state = {
+    data: []
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  componentDidMount() {
+    fetch('http://localhost:8080/api/read')
+        .then(response => response.json())
+        .then(data => this.setState({data}));
+  }
+
+  render() {
+    return (
+        <div>
+          ADDRESS BOOK APP
+          <p>{this.state.data.map(film => <Film info={film}/>)}</p>
+        </div>
+    );
+  }
 }
-
 export default App;
