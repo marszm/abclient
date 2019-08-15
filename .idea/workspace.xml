@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ceaf0c8b-ad06-414f-b3a9-14ca8102687d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Film.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -49,6 +48,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2018.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -87,7 +87,8 @@
       <workItem from="1565796816271" duration="413000" />
       <workItem from="1565797676720" duration="137000" />
       <workItem from="1565804434005" duration="4524000" />
-      <workItem from="1565851573868" duration="10590000" />
+      <workItem from="1565851573868" duration="10920000" />
+      <workItem from="1565875409634" duration="3078000" />
     </task>
     <task id="LOCAL-00001" summary="client for ab rest api - fetching data">
       <created>1565797103974</created>
@@ -103,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565797738006</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="client for ab rest api - fetching data into table">
+      <created>1565862234080</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1565862234080</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +136,7 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="client for ab rest api - fetching data" />
-    <option name="LAST_COMMIT_MESSAGE" value="client for ab rest api - fetching data" />
+    <MESSAGE value="client for ab rest api - fetching data into table" />
+    <option name="LAST_COMMIT_MESSAGE" value="client for ab rest api - fetching data into table" />
   </component>
 </project>
