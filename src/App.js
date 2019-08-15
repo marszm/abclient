@@ -1,9 +1,11 @@
 import React ,{Component} from 'react';
-import Film from './component/Film';
 class App extends Component {
-  state = {
-    data: []
-  }
+
+
+
+    state = {
+      data: [],
+  };
 
   componentDidMount() {
     fetch('http://localhost:8080/api/read')
@@ -11,13 +13,42 @@ class App extends Component {
         .then(data => this.setState({data}));
   }
 
+  renderTableData() {
+    return this.state.data.map((user) => {
+      const { id, firstName, secondName, phoneNumber, address, email } = user //destructuring
+      return (
+          <tr key={id}>
+            <td>{id}</td>
+            <td>{firstName}</td>
+            <td>{secondName}</td>
+            <td>{phoneNumber}</td>
+            <td>{address}</td>
+            <td>{email}</td>
+          </tr>
+      )
+    })
+  }
+
+  renderTableHeader() {
+    let header = Object.keys(this.state.data)
+    return header.map((key, index) => {
+      return <th key={index}>{key.toUpperCase()}</th>
+    })
+  }
+
   render() {
     return (
         <div>
-          ADDRESS BOOK APP
-          <p>{this.state.data.map(film => <Film info={film}/>)}</p>
+          <h1 id='title'>LIST OF ALL ADDRESS BOOK USERS </h1>
+          <table id='students'>
+            <tbody>
+            <tr>{this.renderTableHeader()}</tr>
+            {this.renderTableData()}
+            </tbody>
+          </table>
         </div>
     );
-  }
+
+    }
 }
 export default App;
