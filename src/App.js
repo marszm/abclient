@@ -1,5 +1,6 @@
 import React ,{Component} from 'react';
-import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import MyTable from './component/MyTable';
+import {Button, ButtonToolbar} from "reactstrap";
 class App extends Component {
 
     constructor(props) {
@@ -16,21 +17,13 @@ class App extends Component {
                 .then(users => this.setState({users}));
         }
 
-
+    handleClick() {
+        return <MyTable/>
+    }
 
         render() {
             return (
-                <div> ADDRESS BOOK USERS LIST.
-                    <BootstrapTable data={this.state.users}>
-                        <TableHeaderColumn isKey dataField='id' />
-                        <TableHeaderColumn dataField='firstName' />
-                        <TableHeaderColumn dataField='secondName' />
-                        <TableHeaderColumn dataField='phoneNumber' />
-                        <TableHeaderColumn dataField='address' />
-                        <TableHeaderColumn dataField='email' />
-                    </BootstrapTable>
-                    <p>{this.state.isFetching ? 'Fetching users...' : ''}</p>
-                </div>
+                    <Button onClick={this.handleClick().bind(this)}>Read USERs</Button>
             );
 
         }

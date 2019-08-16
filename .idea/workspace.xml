@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ceaf0c8b-ad06-414f-b3a9-14ca8102687d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/component/MyTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="TypeScript JSX File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -88,7 +87,8 @@
       <workItem from="1565797676720" duration="137000" />
       <workItem from="1565804434005" duration="4524000" />
       <workItem from="1565851573868" duration="10920000" />
-      <workItem from="1565875409634" duration="3078000" />
+      <workItem from="1565875409634" duration="6496000" />
+      <workItem from="1565882843159" duration="712000" />
     </task>
     <task id="LOCAL-00001" summary="client for ab rest api - fetching data">
       <created>1565797103974</created>
@@ -111,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565862234080</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="client for ab rest api - fetching data into table - OK">
+      <created>1565878674988</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1565878674988</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +144,7 @@
     </ignored-roots>
     <MESSAGE value="client for ab rest api - fetching data" />
     <MESSAGE value="client for ab rest api - fetching data into table" />
-    <option name="LAST_COMMIT_MESSAGE" value="client for ab rest api - fetching data into table" />
+    <MESSAGE value="client for ab rest api - fetching data into table - OK" />
+    <option name="LAST_COMMIT_MESSAGE" value="client for ab rest api - fetching data into table - OK" />
   </component>
 </project>
