@@ -1,4 +1,8 @@
 import {BootstrapTable, TableHeaderColumn} from "react-bootstrap-table";
+
+
+
+
 import React, {Component} from "react";
 
 class MyTable extends Component {
