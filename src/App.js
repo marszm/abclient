@@ -12,7 +12,7 @@ class App extends Component {
             secondName : '',
             phoneNumber : '',
             address : '',
-            email : '',
+            email : ''
         },
         editBookData: {
             id: '',
@@ -20,11 +20,11 @@ class App extends Component {
             secondName : '',
             phoneNumber : '',
             address : '',
-            email : '',
+            email : ''
         },
         newBookModal: false,
         editBookModal: false
-      }
+      };
 
     componentWillMount() {
         axios.get('http://localhost:8080/api/read').then((response) => {
@@ -40,6 +40,11 @@ class App extends Component {
         });
       }
 
+    toggleEditBookModal() {
+        this.setState({
+            editBookModal: ! this.state.editBookModal
+        });
+    }
      
       addBook() {
         axios.post('http://localhost:8080/api/create', this.state.newBookData).then((response) => {
@@ -57,7 +62,27 @@ class App extends Component {
           }});
         });
       }
-   
+
+    updateBook() {
+        let { firstName, secondName, phoneNumber, address, email } = this.state.editBookData;
+
+        axios.put('http://localhost:8080/update' + this.state.editBookData.id, {
+            firstName, secondName, phoneNumber, address, email
+        }).then((response) => {
+            this.componentWillMount();
+
+            this.setState({
+                editBookModal: false, editBookData: { id: '', firstName: '', secondName: '', phoneNumber: '', address: '', email: '' }
+            })
+        });
+    }
+
+    editBook(id, firstName, secondName, phoneNumber, address, email ) {
+        this.setState({
+            editBookData: { id, firstName, secondName, phoneNumber, address, email}, editBookModal: ! this.state.editBookModal
+        });
+    }
+
         render() {
             let users = this.state.users.map((user) => {
                 return(
@@ -148,6 +173,37 @@ class App extends Component {
                         <ModalFooter>
                         <Button color="primary" onClick={this.addBook.bind(this)}>Add User</Button>{' '}
                         <Button color="secondary" onClick={this.toggleNewBookModal.bind(this)}>Cancel</Button>
+                        </ModalFooter>
+                    </Modal>
+
+                    <Modal isOpen={this.state.editBookModal} toggle={this.toggleEditBookModal.bind(this)}>
+                        <ModalHeader toggle={this.toggleEditBookModal.bind(this)}>Edit a new book</ModalHeader>
+                        <ModalBody>
+                            <FormGroup>
+                                <Label for="title">Title</Label>
+                                <Input id="title" value={this.state.editBookData.title} onChange={(e) => {
+                                    let { editBookData } = this.state;
+
+                                    editBookData.title = e.target.value;
+
+                                    this.setState({ editBookData });
+                                }} />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label for="rating">Rating</Label>
+                                <Input id="rating" value={this.state.editBookData.rating} onChange={(e) => {
+                                    let { editBookData } = this.state;
+
+                                    editBookData.rating = e.target.value;
+
+                                    this.setState({ editBookData });
+                                }} />
+                            </FormGroup>
+
+                        </ModalBody>
+                        <ModalFooter>
+                            <Button color="primary" onClick={this.updateBook.bind(this)}>Update Book</Button>{' '}
+                            <Button color="secondary" onClick={this.toggleEditBookModal.bind(this)}>Cancel</Button>
                         </ModalFooter>
                     </Modal>
 
