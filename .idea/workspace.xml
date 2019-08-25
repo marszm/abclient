@@ -91,7 +91,7 @@
       <workItem from="1565975711571" duration="1375000" />
       <workItem from="1566110611755" duration="4785000" />
       <workItem from="1566123761816" duration="4953000" />
-      <workItem from="1566732749565" duration="1171000" />
+      <workItem from="1566732749565" duration="2287000" />
     </task>
     <task id="LOCAL-00001" summary="client for ab rest api - fetching data">
       <created>1565797103974</created>
@@ -142,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566132499107</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="rest client works fine - added sort by name, second name and email">
+      <created>1566734055515</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1566734055515</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +179,7 @@
     <MESSAGE value="trying to add create user button" />
     <MESSAGE value="add user button works fine &#10;working on edit and delete" />
     <MESSAGE value="rest client works fine" />
-    <option name="LAST_COMMIT_MESSAGE" value="rest client works fine" />
+    <MESSAGE value="rest client works fine - added sort by name, second name and email" />
+    <option name="LAST_COMMIT_MESSAGE" value="rest client works fine - added sort by name, second name and email" />
   </component>
 </project>

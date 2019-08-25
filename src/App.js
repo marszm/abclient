@@ -1,6 +1,7 @@
 import React ,{Component} from 'react';
 import {Input, FormGroup, Label, Modal, ModalHeader, ModalBody, ModalFooter, Table, Button} from 'reactstrap';
 import axios from 'axios';
+import './App.css';
 
 class App extends Component {
 
@@ -96,7 +97,7 @@ class App extends Component {
 
         axios.put('http://localhost:8080/api/update' , this.state.editBookData, {
             id, firstName, secondName, phoneNumber, address,email
-        }).then((response) => {
+        }).then(() => {
             this._refreshBooks();
 
             this.setState({
@@ -111,7 +112,7 @@ class App extends Component {
     }
 
     deleteBook(id) {
-        axios.delete('http://localhost:8080/api/delete/' + id).then((response) => {
+        axios.delete('http://localhost:8080/api/delete/' + id).then(() => {
             this._refreshBooks();
         });
     }
