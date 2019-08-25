@@ -38,6 +38,30 @@ class App extends Component {
         }); 
     }
 
+    sortByFirstName() {
+        axios.get('http://localhost:8080/api/sortByFirstName').then((response) => {
+            this.setState({
+                users: response.data
+            })
+        });
+    }
+
+    sortBySecondName() {
+        axios.get('http://localhost:8080/api/sortBySecondName').then((response) => {
+            this.setState({
+                users: response.data
+            })
+        });
+    }
+
+    sortByEmail() {
+        axios.get('http://localhost:8080/api/sortByEmail').then((response) => {
+            this.setState({
+                users: response.data
+            })
+        });
+    }
+
     toggleNewBookModal() {
         this.setState({
           newBookModal: ! this.state.newBookModal
@@ -51,12 +75,12 @@ class App extends Component {
     }
      
       addBook() {
-        axios.post('http://localhost:8080/api/create', this.state.editBookData).then((response) => {
+        axios.post('http://localhost:8080/api/create', this.state.newBookData).then((response) => {
           let { users } = this.state;
     
           users.push(response.data);
     
-          this.setState({ users, newBookModal: false, editBookData: {
+          this.setState({ users, newBookModal: false, newBookData: {
             id: '',
             firstName : '',
             secondName : '',
@@ -126,6 +150,9 @@ class App extends Component {
                     <h1>Address Book App</h1>
 
                     <Button className="my-3" color="primary" onClick={this.toggleNewBookModal.bind(this)}>Add User</Button>
+                    <Button className="my-3" color="primary" onClick={this.sortByFirstName.bind(this)}>Sort By First Name</Button>
+                    <Button className="my-3" color="primary" onClick={this.sortBySecondName.bind(this)}>Sort By Second Name</Button>
+                    <Button className="my-3" color="primary" onClick={this.sortByEmail.bind(this)}>Sort By Email</Button>
 
                     <Modal isOpen={this.state.newBookModal} toggle={this.toggleNewBookModal.bind(this)}>
                         <ModalHeader toggle={this.toggleNewBookModal.bind(this)}>Add a new user</ModalHeader>
